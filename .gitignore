@@ -1,0 +1,11 @@
+push_swap 
+checker_Mac
+
+objs/
+tests/
+
+libft/libft.a
+
+*.o
+*.a
+*.dSYM/
