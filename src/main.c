@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 12:50:17 by nico              #+#    #+#             */
-/*   Updated: 2026/02/01 13:49:19 by nico             ###   ########.fr       */
+/*   Updated: 2026/02/12 21:28:36 by nwirtzbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(int argc, char **argv)
     init_stack_a(&a, &argv[1]);
     if (stack_len(a) > 1 && !is_sorted(a)) //se tivermos mais de 1 elemento na stack e nao estiverem ordenados, chama o turk_sort
         turk_sort(&a, &b);
-    free_stack(&a);
+    free_stack(&a); //enderećo do ponteiro, ou seja, &a == t_stack **
     free_stack(&b);
     return (0);
 }
