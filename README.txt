@@ -15,7 +15,8 @@ The program push_swap calculates and displays the shortest sequence of Push_swap
 O push_swap tem 4 grandes responsabilidades:
 - Ler e validar a entrada
 - Representar as stacks em memória
-- Executar comandos permitidos
+- Executa
+r comandos permitidos
 - Decidir quais comandos usar para ordenar
 
 ## *Instructions*

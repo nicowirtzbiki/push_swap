@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   input_to_stack.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 21:52:07 by nico              #+#    #+#             */
-/*   Updated: 2026/02/12 21:28:17 by nwirtzbi         ###   ########.fr       */
+/*   Updated: 2026/02/13 09:04:58 by nico             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,14 @@ static void error_exit(t_stack **a, char **split)
     exit(1);
 }
 
+/*
+** Validates a token, converts it to integer, checks for duplicates,
+** and adds it to stack A. Exits on any validation failure.
+**
+** @param a: Pointer to stack A
+** @param token: String token to parse
+** @param split_ctx: Current split array (for cleanup on error)
+*/
 static void	parse_and_add(t_stack **a, const char *token, char **split_ctx)
 {
 	long	n;
@@ -42,7 +50,37 @@ static void	parse_and_add(t_stack **a, const char *token, char **split_ctx)
 	append_node(a, (int)n);
 }
 
-void    init_stack_a(t_stack **a, char **argv)
+
+/*
+** Initializes stack A from command-line arguments.
+** Handles both individual arguments and whitespace-separated strings.
+**
+** @param a: Pointer to stack A pointer
+** @param argv: Array of argument strings (NULL-terminated)
+*/
+void	init_stack_a(t_stack **a, char **argv)
 {
-    
+	int		i;
+	int		j;
+	char	**split;
+
+	if (!a || !argv)
+		return ;
+	i = 0;
+	while (argv[i])
+	{
+		split = ft_split(argv[i], ' ');
+		if (!split)
+			error_exit(a, NULL);
+		if (!split[0])
+			error_exit(a, split);
+		j = 0;
+		while (split[j])
+		{
+			parse_and_add(a, split[j], split);
+			j++;
+		}
+		free_split(split);
+		i++;
+	}
 }

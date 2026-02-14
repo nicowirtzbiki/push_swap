@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 12:50:17 by nico              #+#    #+#             */
-/*   Updated: 2026/02/12 21:28:36 by nwirtzbi         ###   ########.fr       */
+/*   Updated: 2026/02/13 14:02:17 by nico             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ int main(int argc, char **argv)
     b = NULL; //inicializo as stacks como NULL
     if (argc < 2) //se nao tiver argumentos, finalize
         return (0);
-    init_stack_a(&a, &argv[1]);
+    init_stack_a(&a, &argv[1]); //&argv[1] é ponteiro para o array de strings terminado em NULL.
     if (stack_len(a) > 1 && !is_sorted(a)) //se tivermos mais de 1 elemento na stack e nao estiverem ordenados, chama o turk_sort
         turk_sort(&a, &b);
-    free_stack(&a); //enderećo do ponteiro, ou seja, &a == t_stack **
+    free_stack(&a); //endereço do ponteiro, ou seja, &a == t_stack **
     free_stack(&b);
     return (0);
 }
