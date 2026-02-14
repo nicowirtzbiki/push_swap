@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   input_to_stack.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/11 21:52:07 by nico              #+#    #+#             */
-/*   Updated: 2026/02/13 09:04:58 by nico             ###   ########.fr       */
+/*   Created: 2026/02/11 21:52:07 by nwirtzbi          #+#    #+#             */
+/*   Updated: 2026/02/14 10:52:12 by nwirtzbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,13 @@
 ** @param a: Stack to free
 ** @param split: String array to free (if any)
 */
-
-static void error_exit(t_stack **a, char **split)
+static void	error_exit(t_stack **a, char **split)
 {
-    if (split)
-        free_split(split);
-    free_stack(a);
-    write(2, "Error\n", 6);
-    exit(1);
+	if (split)
+		free_split(split);
+	free_stack(a);
+	write(2, "Error\n", 6);
+	exit(1);
 }
 
 /*
