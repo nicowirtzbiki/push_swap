@@ -2,7 +2,7 @@ NAME        = push_swap
 
 CC          = cc
 CFLAGS      = -Wall -Wextra -Werror -g
-INCLUDES    = -Iincludes -Ilibft
+INCLUDES    = -Ilibft
 RM          = rm -f
 RM_DIR      = rm -rf
 
@@ -28,7 +28,6 @@ PS_SRCS = \
 	src/stack/stack_order.c \
 	src/stack/stack_ops.c \
     src/parsing/input_to_stack.c \
-    src/parsing/parse_split_free.c \
     src/parsing/parse_validate.c
 
 # --- Objects ---

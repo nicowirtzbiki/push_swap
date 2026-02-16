@@ -44,8 +44,7 @@ Main function: parses input, sorts if needed, and cleans up.
 - Project files structure:
 
 push_swap/ 
-├── includes/ 
-    ├──push_swap.h 
+ 
 ├── libft/ 
     ├──Makefile 
     ├──ft_atol.c 
@@ -60,7 +59,7 @@ push_swap/
     ├──ft_substr.c 
     ├──libft.h 
 ├── src/ 
-    ├──algorithm/ 
+    ├──sorting_algorithm/ 
         ├──calc_costs.c 
         ├── execute_moves.c 
         ├──final_rotation.c 
@@ -76,15 +75,15 @@ push_swap/
         ├──swap_ops.c 
     ├──parsing/ 
         ├──input_to_stack.c 
-        ├──parse_split_free.c 
         ├──parse_validate.c 
     ├──stack/ 
         ├──stack_nav.c 
         ├──stack_ops.c 
         ├──stack_order.c 
-    ├──main.c 
+    ├──main.c
 ├── .gitignore ok
 ├── Makefile 
+├──push_swap.h 
 └── README.md
 
 ## *Resources*

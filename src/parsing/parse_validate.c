@@ -6,7 +6,7 @@
 /*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 21:19:15 by nwirtzbi          #+#    #+#             */
-/*   Updated: 2026/02/14 10:58:19 by nwirtzbi         ###   ########.fr       */
+/*   Updated: 2026/02/16 20:40:23 by nwirtzbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,24 @@ bool	check_duplicate(t_stack *stack, int value)
 		stack = stack->next;
 	}
 	return (false);
+}
+
+/*
+** Frees all strings in a null-terminated array and the array itself.
+**
+** @param arr: Null-terminated string array to free
+*/
+void	free_split(char **arr)
+{
+	int	k;
+
+	if (!arr)
+		return ;
+	k = 0;
+	while (arr[k])
+	{
+		free(arr[k]);
+		k++;
+	}
+	free(arr);
 }
