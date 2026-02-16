@@ -12,10 +12,10 @@ LIBFT       = $(LIBFT_DIR)/libft.a
 # --- Source Files (with full paths) ---
 PS_SRCS = \
     src/main.c \
-    src/commands/swap_ops.c \
-    src/commands/push_ops.c \
-    src/commands/rotate_ops.c \
-    src/commands/rev_rotate_ops.c \
+    src/allowed_ops/swap_ops.c \
+    src/allowed_ops/push_ops.c \
+    src/allowed_ops/rotate_ops.c \
+    src/allowed_ops/rev_rotate_ops.c \
     src/algorithm/turk_sort.c \
     src/algorithm/small_cases.c \
     src/algorithm/final_rotation.c \

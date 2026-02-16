@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/03 11:59:10 by nico              #+#    #+#             */
-/*   Updated: 2026/02/07 12:06:27 by nico             ###   ########.fr       */
+/*   Created: 2026/01/03 11:59:10 by nwirtzbi          #+#    #+#             */
+/*   Updated: 2026/02/16 19:18:08 by nwirtzbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef struct s_stack
     
 }   t_stack;
 
-// commands
+// allowed_ops
 void    sa(t_stack **a, int print);
 void    sb(t_stack **b, int print);
 void    ss(t_stack **a, t_stack **b, int print);

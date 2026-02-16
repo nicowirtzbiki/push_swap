@@ -69,7 +69,7 @@ push_swap/
         ├──rotation_moves.c 
         ├──small_cases.c 
         ├──turk_sort.c 
-    ├──commands/ 
+    ├──allowed_ops/ 
         ├──push_ops.c 
         ├──rev_rotate_ops.c 
         ├──rotate_ops.c 
