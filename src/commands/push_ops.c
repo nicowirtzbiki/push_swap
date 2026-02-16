@@ -3,27 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_ops.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 09:42:38 by nico              #+#    #+#             */
-/*   Updated: 2026/02/13 10:03:08 by nico             ###   ########.fr       */
+/*   Updated: 2026/02/14 11:32:07 by nwirtzbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/*
-** Push Operations
-**
-** Implements the pa and pb commands that move elements between stacks.
-** These are critical operations in the push_swap algorithm.
-**
-** - pa: push a - take the first element from b and put it on top of a
-** - pb: push b - take the first element from a and put it on top of b
-**
-** These operations run in constant time O(1) by only manipulating the top
-** node pointers, regardless of stack size. They form the core of all moves.
-*/
 
 /*
 ** Moves the top element from src stack to dst stack.
