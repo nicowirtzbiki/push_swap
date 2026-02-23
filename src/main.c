@@ -6,7 +6,7 @@
 /*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 12:50:17 by nico              #+#    #+#             */
-/*   Updated: 2026/02/13 14:02:17 by nico             ###   ########.fr       */
+/*   Updated: 2026/02/23 22:34:35 by nico             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@ It accepts integers as command-line arguments and outputs the sequence of operat
 
 #include "push_swap.h"
 
+/*
+** Main function: parses input, sorts if needed, and cleans up.
+**
+** @param argc: Argument count
+** @param argv: Argument values (integers to sort)
+** @return: 0 on success
+*/
 int main(int argc, char **argv)
 {
     t_stack *a; //crio stack 1 e stack 2

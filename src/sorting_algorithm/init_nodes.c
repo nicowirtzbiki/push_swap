@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_nodes.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/19 19:28:03 by nwirtzbi          #+#    #+#             */
-/*   Updated: 2026/02/19 20:03:12 by nwirtzbi         ###   ########.fr       */
+/*   Updated: 2026/02/23 22:32:16 by nico             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	init_nodes_a(t_stack *a, t_stack *b)
 	set_cost_a(a, b);
 	set_cheapest(a);
 }
+
 /*
 ** Initializes node metadata when moving from B to A.
 ** Sets positions and targets for proper insertion.
