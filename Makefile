@@ -23,7 +23,7 @@ PS_SRCS = \
     src/algorithm/find_targets.c \
     src/algorithm/calc_costs.c \
     src/algorithm/execute_moves.c \
-    src/algorithm/rotation_moves.c \
+    src/algorithm/a2b_rotation_moves.c \
 	src/stack/stack_nav.c \
 	src/stack/stack_order.c \
 	src/stack/stack_ops.c \

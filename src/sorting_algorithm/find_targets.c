@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   find_targets.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/19 20:06:13 by nwirtzbi          #+#    #+#             */
-/*   Updated: 2026/02/23 22:26:18 by nico             ###   ########.fr       */
+/*   Updated: 2026/02/26 20:56:04 by nwirtzbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **
 ** @param b: Stack B to search
 ** @param val: Value to find target for
-** @return: Target node in B
+** @return: Target node in Bs
 */
 static t_stack	*find_target_in_b(t_stack *b, int val)
 {

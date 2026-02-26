@@ -6,7 +6,7 @@
 /*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 20:23:54 by nwirtzbi          #+#    #+#             */
-/*   Updated: 2026/02/16 21:38:38 by nwirtzbi         ###   ########.fr       */
+/*   Updated: 2026/02/26 20:55:46 by nwirtzbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,24 @@
 ** 1. Pushes initial elements from A to B (keeps at least 3 in A)
 ** 2. Iteratively pushes remaining elements using cost analysis
 ** 3. Sorts the final 3 elements in A using optimized rotations
-** 4. Returns all elements from B to A in sorted order
+** 4. Returns all elements from B to Avoid	move_b_to_a(t_stack **a, t_stack **b)
+{
+	t_stack	*node;
+
+	if (!a || !b || !*b)
+		return ;
+	node = *b;
+	while (*a && node->target_node && *a != node->target_node)
+	{
+		set_current_position(*a);
+		set_current_position(*b);
+		if (node->target_node->above_median)
+			ra(a, 1);
+		else
+			rra(a, 1);
+	}
+	pa(a, b, 1);
+} in sorted order
 ** 5. Performs final rotation to place minimum at the top
 **
 ** The algorithm minimizes operations by choosing the cheapest moves at each
@@ -30,7 +47,24 @@
 ** Pushes up to two elements from A to B if stack has more than 3 elements.
 ** This initializes stack B and ensures A has at least 3 elements for sort_three.
 **
-** @param a: Pointer to stack A
+** @param a: Pointer to stack Avoid	move_b_to_a(t_stack **a, t_stack **b)
+{
+	t_stack	*node;
+
+	if (!a || !b || !*b)
+		return ;
+	node = *b;
+	while (*a && node->target_node && *a != node->target_node)
+	{
+		set_current_position(*a);
+		set_current_position(*b);
+		if (node->target_node->above_median)
+			ra(a, 1);
+		else
+			rra(a, 1);
+	}
+	pa(a, b, 1);
+}
 ** @param b: Pointer to stack B
 */
 static void	push_two_to_b(t_stack **a, t_stack **b)

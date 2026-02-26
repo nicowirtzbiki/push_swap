@@ -6,14 +6,14 @@
 /*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 21:19:15 by nwirtzbi          #+#    #+#             */
-/*   Updated: 2026/02/16 20:40:23 by nwirtzbi         ###   ########.fr       */
+/*   Updated: 2026/02/26 20:56:41 by nwirtzbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /*
-** Validates if a string represents a valid integer within INT_MIN/INT_MAX.
+** Validates if a string represents a valid integer witshin INT_MIN/INT_MAX.
 ** Accepts optional leading '+' or '-' sign.
 **
 ** @param s: String to validate

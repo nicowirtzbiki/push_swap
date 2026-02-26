@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute_moves.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/25 22:26:44 by nico              #+#    #+#             */
-/*   Updated: 2026/02/25 23:14:40 by nico             ###   ########.fr       */
+/*   Created: 2026/02/25 22:26:44 by nwirtzbi          #+#    #+#             */
+/*   Updated: 2026/02/26 20:56:18 by nwirtzbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 **   2. Rotates A to align target position
 **   3. Executes pa to push from B to A
 **
-** Rotation optimization is handled by rotation_moves.c helpers.
+** Rotation optimization is handled by a2b_rotation_moves.c helpers.
 */
 
 /*
@@ -54,7 +54,24 @@ static t_stack	*find_cheapest_node(t_stack *a)
 ** Rotates both stacks optimally, then executes pb.
 **
 ** @param a: Pointer to stack A (source)
-** @param b: Pointer to stack B (destination)
+** @param b: Pointer to stacvoid	move_b_to_a(t_stack **a, t_stack **b)
+{
+	t_stack	*node;
+
+	if (!a || !b || !*b)
+		return ;
+	node = *b;
+	while (*a && node->target_node && *a != node->target_node)
+	{
+		set_current_position(*a);
+		set_current_position(*b);
+		if (node->target_node->above_median)
+			ra(a, 1);
+		else
+			rra(a, 1);
+	}
+	pa(a, b, 1);
+}k B (destination)
 */
 void	move_a_to_b(t_stack **a, t_stack **b)
 {
@@ -78,10 +95,19 @@ void	move_a_to_b(t_stack **a, t_stack **b)
 */
 void	move_b_to_a(t_stack **a, t_stack **b)
 {
-    t_stack *node;
+	t_stack	*node;
 
-    if (!a || !b || !*b)
-        return ;
-    node = *b;
-    
+	if (!a || !b || !*b)
+		return ;
+	node = *b;
+	while (*a && node->target_node && *a != node->target_node)
+	{
+		set_current_position(*a);
+		set_current_position(*b);
+		if (node->target_node->above_median)
+			ra(a, 1);
+		else
+			rra(a, 1);
+	}
+	pa(a, b, 1);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotation_moves.c                                   :+:      :+:    :+:   */
+/*   a2b_rotation_moves.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/25 18:50:34 by nico              #+#    #+#             */
-/*   Updated: 2026/02/25 23:06:29 by nico             ###   ########.fr       */
+/*   Created: 2026/02/25 18:50:34 by nwirtzbi          #+#    #+#             */
+/*   Updated: 2026/02/26 20:54:56 by nwirtzbi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,20 @@ void	do_single_rotations(t_stack **a, t_stack **b, t_stack *node)
 */
 void	do_rotation_step(t_stack **a, t_stack **b, t_stack *node)
 {
-    
+	if (node->target_node
+		&& node->above_median
+		&& node->target_node->above_median
+		&& *a != node
+		&& *b != node->target_node)
+		rr(a, b, 1);
+	else if (node->target_node
+		&& !node->above_median
+		&& !node->target_node->above_median
+		&& *a != node
+		&& *b != node->target_node)
+		rrr(a, b, 1);
+	else
+		do_single_rotations(a, b, node);
 }
 
 /*
@@ -61,5 +74,12 @@ void	do_rotation_step(t_stack **a, t_stack **b, t_stack *node)
 */
 void	bring_nodes_to_top(t_stack **a, t_stack **b, t_stack *node)
 {
-
+	if (!node)
+		return ;
+	while ((*a) != node || (node->target_node && *b != node->target_node))
+	{
+		set_current_position(*a);
+		set_current_position(*b);
+		do_rotation_step(a, b, node);
+	}
 }
