@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute_moves.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 22:26:44 by nwirtzbi          #+#    #+#             */
-/*   Updated: 2026/02/26 20:56:18 by nwirtzbi         ###   ########.fr       */
+/*   Updated: 2026/03/01 23:25:11 by nico             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,24 +54,7 @@ static t_stack	*find_cheapest_node(t_stack *a)
 ** Rotates both stacks optimally, then executes pb.
 **
 ** @param a: Pointer to stack A (source)
-** @param b: Pointer to stacvoid	move_b_to_a(t_stack **a, t_stack **b)
-{
-	t_stack	*node;
-
-	if (!a || !b || !*b)
-		return ;
-	node = *b;
-	while (*a && node->target_node && *a != node->target_node)
-	{
-		set_current_position(*a);
-		set_current_position(*b);
-		if (node->target_node->above_median)
-			ra(a, 1);
-		else
-			rra(a, 1);
-	}
-	pa(a, b, 1);
-}k B (destination)
+** @param b: Pointer to stack B (destination)
 */
 void	move_a_to_b(t_stack **a, t_stack **b)
 {

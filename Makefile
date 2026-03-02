@@ -2,7 +2,7 @@ NAME        = push_swap
 
 CC          = cc
 CFLAGS      = -Wall -Wextra -Werror -g
-INCLUDES    = -Ilibft
+INCLUDES    = -Ilibft -Isrc
 RM          = rm -f
 RM_DIR      = rm -rf
 
@@ -16,14 +16,14 @@ PS_SRCS = \
     src/allowed_ops/push_ops.c \
     src/allowed_ops/rotate_ops.c \
     src/allowed_ops/rev_rotate_ops.c \
-    src/algorithm/turk_sort.c \
-    src/algorithm/small_cases.c \
-    src/algorithm/final_rotation.c \
-    src/algorithm/init_nodes.c \
-    src/algorithm/find_targets.c \
-    src/algorithm/calc_costs.c \
-    src/algorithm/execute_moves.c \
-    src/algorithm/a2b_rotation_moves.c \
+    src/sorting_algorithm/turk_sort.c \
+    src/sorting_algorithm/small_cases.c \
+    src/sorting_algorithm/final_rotation.c \
+    src/sorting_algorithm/init_nodes.c \
+    src/sorting_algorithm/find_targets.c \
+    src/sorting_algorithm/calc_costs.c \
+    src/sorting_algorithm/execute_moves.c \
+    src/sorting_algorithm/a2b_rotation_moves.c \
 	src/stack/stack_nav.c \
 	src/stack/stack_order.c \
 	src/stack/stack_ops.c \

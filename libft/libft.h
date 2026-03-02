@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nwirtzbi <nwirtzbi@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 11:52:26 by nwirtzbi          #+#    #+#             */
-/*   Updated: 2026/02/26 20:57:36 by nwirtzbi         ###   ########.fr       */
+/*   Updated: 2026/03/02 15:09:44 by nico             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,8 @@
 # include <limits.h>
 
 size_t	ft_strlen(const char *s);
-char	*ft_strdup(const char *s1);
 long	ft_atol(const char *s);
-void	*ft_calloc(size_t count, size_t size);
-void	ft_bzero(void *s, size_t n);
 int		ft_isdigit(int c);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_putstr_fd(char *s, int fd);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	**ft_split(const char *s, char c);

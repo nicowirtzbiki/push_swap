@@ -4,8 +4,12 @@ CFLAGS = -Wall -Wextra -Werror
 
 OBJDIR = ../obj/libft
 
-SRCS = ft_strlen.c ft_strdup.c ft_atol.c ft_calloc.c ft_bzero.c ft_isdigit.c \
-	ft_strncmp.c ft_putstr_fd.c ft_substr.c ft_split.c
+SRCS = ft_atol.c \
+	ft_isdigit.c \
+	ft_putstr_fd.c \
+	ft_strlen.c \
+	ft_substr.c \
+	ft_split.c
 
 OBJS = $(SRCS:%.c=$(OBJDIR)/%.o)
 
