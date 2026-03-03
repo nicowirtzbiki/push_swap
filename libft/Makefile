@@ -1,5 +1,5 @@
 NAME = libft.a
-CC = CC
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 OBJDIR = ../obj/libft
