@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    README.txt                                         :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: nico <nico@student.42.fr>                  +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/03/04 17:03:19 by nico              #+#    #+#              #
+#    Updated: 2026/03/04 17:03:19 by nico             ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 *This project has been created as part of the 42 curriculum by nwirtzbi.*
 
 # **Project Title**
@@ -31,23 +43,44 @@ The program push_swap calculates and displays the shortest sequence of Push_swap
 - Executing allowed commands
 - Deciding which commands to use for sorting
 
-### Compilation:
-- make // compilation
-- make clean //clean object files
-- make fclean //full clean (objects + binary)
-- make re //rebuild
-
-### Usage: ./push_swap [numbers...]
-- Example 1 : ./push_swap 3 -2 1 0 -> outputs operations to sort
-- Example 2 : ./push_swap "6 8" "3 1 2 0" -> outputs operations to sort
-The program prints the required operations to stdout, one per line.
-
 ### Allowed operations:
 - sa/sb/ss: swap first two elements
 - pa/pb: push top node from one stack to another
 - ra/rb/rr: rotate up (first becomes last)
 - rra/rrb/rrr: reverse rotate down (last becomes first)
 Each operation runs in *O(1)* time.
+
+### Compilation:
+- make // compilation
+- make clean //clean object files
+- make fclean //full clean (objects + binary)
+- make re //rebuild
+
+### Execution
+- **Multiple arguments**
+./push_swap 4 67 3 87 23
+
+- **Single string argument
+./push_swap "4 67 3 87 23"
+
+- **Count the number of operations**
+./push_swap 4 67 3 87 23 | wc -l
+
+- **Generate 100 randomnumbers and test**
+ARG=$(shuf -i 1-500 -n 100 | tr '\n' ' '); ./push_swap $ARG | wc -l
+
+- **Generate 500 randomnumbers and test**
+ARG=$(shuf -i 1-50000 -n 500 | tr '\n' ' '); ./push_swap $ARG | wc -l
+
+- **Test for leaks**
+valgrind --leak-check=full --show-leak-kinds=all ./push_swap 3 2 1
+valgrind --leak-check=full --show-leak-kinds=all ./push_swap $(shuf -i 1-100 -n 100)
+
+
+### Usage: ./push_swap [numbers...]
+- Example 1 : ./push_swap 3 -2 1 0 -> outputs operations to sort
+- Example 2 : ./push_swap "6 8" "3 1 2 0" -> outputs operations to sort
+The program prints the required operations to stdout, one per line.
 
 ### Error Handling
 The program prints *Error* to stderr and exits with status 1 if:

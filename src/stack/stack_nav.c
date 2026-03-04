@@ -30,6 +30,7 @@ int	stack_len(t_stack *stack)
 	}
 	return (i);
 }
+
 /*
 ** Finds and returns the last node in the stack.
 **

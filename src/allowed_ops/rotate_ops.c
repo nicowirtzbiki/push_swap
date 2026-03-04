@@ -60,7 +60,6 @@ void	rb(t_stack **b, int print)
 		ft_putstr_fd("rb\n", 1);
 }
 
-
 /*
 ** Performs ra and rb simultaneously (rotates both stacks).
 **

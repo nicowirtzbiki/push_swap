@@ -6,7 +6,7 @@
 /*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 12:03:10 by nwirtzbi          #+#    #+#             */
-/*   Updated: 2026/02/28 11:03:25 by nico             ###   ########.fr       */
+/*   Updated: 2026/03/04 17:06:19 by nico             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ static long	overflow_ret(int sign)
 		return (LONG_MIN);
 	return (LONG_MAX);
 }
-
 
 static int	parse_sign(const char **s)
 {

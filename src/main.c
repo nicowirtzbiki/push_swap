@@ -6,13 +6,16 @@
 /*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 12:50:17 by nwirtzbi          #+#    #+#             */
-/*   Updated: 2026/03/01 18:59:45 by nico             ###   ########.fr       */
+/*   Updated: 2026/03/04 17:06:20 by nico             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Write a C program called push_swap that calculates and displays the shortest sequence of Push_swap instructions needed to sort the given integers.
-It accepts integers as command-line arguments and outputs the sequence of operations needed to sort them.*/
-
+/*Write a C program called push_swap that calculates 
+**and displays the shortest sequence of Push_swap 
+**instructions needed to sort the given integers.
+**It accepts integers as command-line arguments and 
+**outputs the sequence of operations needed to sort them.
+*/
 #include "push_swap.h"
 
 /*
@@ -22,25 +25,19 @@ It accepts integers as command-line arguments and outputs the sequence of operat
 ** @param argv: Argument values (integers to sort)
 ** @return: 0 on success
 */
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-    t_stack *a; 
-    t_stack *b;
+	t_stack	*a;
+	t_stack	*b;
 
-    a = NULL;
-    b = NULL; 
-    if (argc < 2) 
-        return (0);
-    init_stack_a(&a, &argv[1]);
-    if (stack_len(a) > 1 && !is_sorted(a)) 
-        turk_sort(&a, &b);
-    free_stack(&a); 
-    free_stack(&b);
-    return (0);
+	a = NULL;
+	b = NULL;
+	if (argc < 2)
+		return (0);
+	init_stack_a(&a, &argv[1]);
+	if (stack_len(a) > 1 && !is_sorted(a))
+		turk_sort(&a, &b);
+	free_stack(&a);
+	free_stack(&b);
+	return (0);
 }
-//crio stack 1 e stack 2
-//inicializo as stacks como NULL
-//if -> se nao tiver argumentos, finalize
-//init -> preenche a stack a. &argv[1] é ponteiro para o array de strings terminado em NULL.
-//if -> se tivermos mais de 1 elemento na stack e nao estiverem ordenados, chama o turk_sort
-//free_stack(&a) -> endereço do ponteiro, ou seja, &a == t_stack **

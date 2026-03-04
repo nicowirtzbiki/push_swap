@@ -6,7 +6,7 @@
 /*   By: nico <nico@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 20:23:54 by nwirtzbi          #+#    #+#             */
-/*   Updated: 2026/03/01 23:16:11 by nico             ###   ########.fr       */
+/*   Updated: 2026/03/04 17:06:22 by nico             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ static void	push_two_to_b(t_stack **a, t_stack **b)
 	if (stack_len(*a) > 3)
 		pb(a, b, 1);
 }
-
 
 /*
 ** Continues pushing elements from A to B until only 3 remain in A.

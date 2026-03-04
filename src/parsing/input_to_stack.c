@@ -49,7 +49,6 @@ static void	parse_and_add(t_stack **a, const char *token, char **split_ctx)
 	append_node(a, (int)n);
 }
 
-
 /*
 ** Initializes stack A from command-line arguments.
 ** Handles both individual arguments and whitespace-separated strings.

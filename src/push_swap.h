@@ -17,32 +17,32 @@
 
 typedef struct s_stack
 {
-    int             value;
-    int             index; // indice que representa a posicao ordenada do valor
-    int             push_cost; //qts operacoes sao necessarias para mover este no para a posicao correta. usado para escolher o movimento mais barato.
-    bool            above_median; //se o nó está localizado na metade superior da stack
-    bool            cheapest; //se o nó é o mais barato
-    struct s_stack  *next; 
-    struct s_stack  *prev; 
-    struct s_stack  *target_node; // ponteiro para o no onde este deve ser inserido
-    
-}   t_stack;
+	int				value;
+	int				index;
+	int				push_cost;
+	bool			above_median;
+	bool			cheapest;
+	struct s_stack	*next;
+	struct s_stack	*prev;
+	struct s_stack	*target_node;
+
+}	t_stack;
 
 // allowed_ops
-void    sa(t_stack **a, int print);
-void    sb(t_stack **b, int print);
-void    ss(t_stack **a, t_stack **b, int print);
+void	sa(t_stack **a, int print);
+void	sb(t_stack **b, int print);
+void	ss(t_stack **a, t_stack **b, int print);
 
-void    pa(t_stack **a, t_stack **b, int print);
-void    pb(t_stack **b, t_stack **a, int print);
+void	pa(t_stack **a, t_stack **b, int print);
+void	pb(t_stack **b, t_stack **a, int print);
 
-void    ra(t_stack **a, int print);
-void    rb(t_stack **b, int print);
-void    rr(t_stack **a, t_stack **b, int print);
+void	ra(t_stack **a, int print);
+void	rb(t_stack **b, int print);
+void	rr(t_stack **a, t_stack **b, int print);
 
-void    rra(t_stack **a, int print);
-void    rrb(t_stack **b, int print);
-void    rrr(t_stack **a, t_stack **b, int print);
+void	rra(t_stack **a, int print);
+void	rrb(t_stack **b, int print);
+void	rrr(t_stack **a, t_stack **b, int print);
 
 // Turk algorithm helpers
 void	turk_sort(t_stack **a, t_stack **b);
@@ -75,7 +75,6 @@ void	free_split(char **arr);
 void	init_stack_a(t_stack **a, char **argv);
 
 // Stack utils (nav, order and ops)
-
 int		stack_len(t_stack *stack);
 t_stack	*find_last(t_stack *stack);
 

@@ -12,13 +12,13 @@
 
 #include "push_swap.h"
 
-
 /*
 ** Finds the largest value in B that is still smaller than the element.
 ** If no such value exists, uses the maximum value in B.
 ** This ensures elements are inserted in descending order in B.
 ** Returns the largest value smaller than val, or max if none exists 
-** (because if nobody is smaller than B, than B is the smaller value and must be in the end of stack).
+** (because if nobody is smaller than B, than B is the smaller value 
+** and must be in the end of stack).
 **
 ** @param b: Stack B to search
 ** @param val: Value to find target for
@@ -42,7 +42,7 @@ static t_stack	*find_target_in_b(t_stack *b, int val)
 	}
 	if (best)
 		return (best);
-	return (find_max(b)); 
+	return (find_max(b));
 }
 
 /*
